@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="600" pageHeight="842" columnWidth="560" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a71b4710-6879-4ce2-874d-bf7ace5a09d7">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="86"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM  `profiler` profiler]]>
+	</queryString>
+	<field name="profiler_first_name" class="java.lang.String"/>
+	<field name="profiler_last_name" class="java.lang.String"/>
+	<field name="profiler_course" class="java.lang.String"/>
+	<field name="profiler_year" class="java.lang.String"/>
+	<field name="profiler_gender" class="java.lang.String"/>
+	<field name="profiler_contact_no" class="java.lang.String"/>
+	<field name="profiler_email" class="java.lang.String"/>
+	<field name="profiler_s_number" class="java.lang.Integer"/>
+	<field name="profiler_timeStamp" class="java.sql.Timestamp"/>
+	<field name="profiler_img" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="74" y="4" width="100" height="20" uuid="61f46b13-1240-4866-b4ee-403048bf487d"/>
+				<text><![CDATA[profiler_first_name]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="146" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="63" width="129" height="20" uuid="19c9aa79-1f32-4587-8e74-95195d6a8b5a"/>
+				<textFieldExpression><![CDATA[$F{profiler_first_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="43" width="129" height="20" uuid="111ee99f-8903-4133-b8b7-c8177b150ef7"/>
+				<textFieldExpression><![CDATA[$F{profiler_last_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="83" width="129" height="20" uuid="18aa5cf6-c46a-4665-8e73-bf0ef9b20b86"/>
+				<textFieldExpression><![CDATA[$F{profiler_course}+"  "+$F{profiler_year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="103" width="129" height="20" uuid="4a010eb6-0c97-4d94-a48e-fd549e6fe084"/>
+				<textFieldExpression><![CDATA[$F{profiler_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="97" width="129" height="20" uuid="12d6cff3-e3ab-44f9-9ced-554482823ad7"/>
+				<textFieldExpression><![CDATA[$F{profiler_contact_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="123" width="129" height="20" uuid="c3579ad2-0fdb-4f93-946e-828624d31f92"/>
+				<textFieldExpression><![CDATA[$F{profiler_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="23" width="129" height="20" uuid="5a997b0f-4cd5-46d0-a66e-be05ec5bb71d"/>
+				<textFieldExpression><![CDATA[$F{profiler_s_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="3" width="129" height="20" uuid="3c47c96a-7cb2-4473-884a-4cb9f312874e"/>
+				<textFieldExpression><![CDATA[$F{profiler_timeStamp}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="340" y="9" width="130" height="94" uuid="c9721fae-3814-465e-9253-795b44cbf7ce"/>
+				<imageExpression><![CDATA["C:\\Users\\jesss\\Desktop\\apapPic\\"+$F{profiler_img}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
